@@ -1,0 +1,41 @@
+api_key: YOUR_API_KEY_HERE 
+
+app_name: jnj
+# viewport_size:
+#  width: 1200
+#  height: 600
+
+batch:
+  name: rel
+  batch_sequence_name: ROBOT
+
+web:
+  force_full_page_screenshot: true  #optional
+  wait_before_screenshots: 100  #optional
+  stitch_mode: Scroll   # Scroll | CSS
+
+mobile_native:
+  is_simulator: false
+
+web_ufg:
+  runner_options:
+     test_concurrency: 3
+  disable_browser_fetching: false
+  enable_cross_origin_rendering: true
+  dont_use_cookies: false
+  layout_breakpoints: false
+  browsers:
+    desktop:
+      - browser_type: EDGE_CHROMIUM  # names from BrowserType
+        width: 1920
+        height: 1080
+      - browser_type: EDGE_CHROMIUM  # names from BrowserType
+        width: 720
+        height: 576
+    ios:
+      - device_name: iPhone_13_Pro # names from IosDeviceName
+        screen_orientation: PORTRAIT # PORTRAIT | LANDSCAPE
+        ios_version: LATEST # LATEST | ONE_VERSION_BACK
+    chrome_emulation:
+      - device_name: Pixel_5 # names from DeviceName
+        screen_orientation: PORTRAIT # PORTRAIT | LANDSCAPE
